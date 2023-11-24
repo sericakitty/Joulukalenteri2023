@@ -1,15 +1,16 @@
 
 #kansikuvaDiv {
-    text-align: center;
-    
-}
-
-#kansikuva {
-    min-height: 600px;
-    max-height: 600px;
-    min-width: 600px;
+    width: 800px;
+    height: 800px;
+    border: 1px solid white;
+    background-color: rgb(1, 47, 81);
+    background-image: url(./kansikuva.png);
+    margin: 10px auto;
+    background-size: cover;
 }
 
 html {
+  width: 800px;
+  margin: 50px auto;
   background-color: rgb(1, 47, 81);
 }
