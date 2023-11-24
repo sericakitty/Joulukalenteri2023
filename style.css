@@ -1,3 +1,4 @@
+
 #kansikuvaDiv {
     text-align: center;
     
@@ -7,4 +8,8 @@
     min-height: 600px;
     max-height: 600px;
     min-width: 600px;
+}
+
+html {
+  background-color: rgb(1, 47, 81);
 }
