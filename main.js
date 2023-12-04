@@ -67,19 +67,15 @@ calendarButton.addEventListener("click", createCalendar);
 // stars animation
 document.addEventListener('DOMContentLoaded', function() {
   const starContainer = document.querySelector('.star-container');
-  const numStars = 100; // Adjust the number of stars here
+  const numStars = 300; // Adjust the number of stars here
 
   for (let i = 0; i < numStars; i++) {
     let star = document.createElement('div');
     star.className = 'star';
-    star.style.top = `${Math.random() * 100}%`;
-    star.style.left = `${Math.random() * 100}%`;
+    star.style.top = `${Math.floor(Math.random() * 100)}%`;
+    star.style.left = `${Math.floor(Math.random() * 100)}%`;
     star.style.animationDelay = `${Math.random() * 2}s`;
-
-    if (Math.random() > 0.5) {
-      star.classList.add('twinkle');
-    }
-
+    star.classList.add('twinkle');
     starContainer.appendChild(star);
   }
 });
