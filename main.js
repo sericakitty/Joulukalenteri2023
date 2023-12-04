@@ -3,6 +3,10 @@ const calendarContainer = document.querySelector(".container")
 
 const calendarDays = 24;
 
+const openDoor = (event) => {
+    event.target.parentNode.style.backgroundImage = 'url()';//kuvien url lisäys, videolla 36.00
+}
+
 const createCalendar = () => {
     for(let i = 0; i < calendarDays; i++){
     const calendarDoor = document.createElement("div");
