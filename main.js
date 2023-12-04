@@ -51,12 +51,10 @@ const createCalendar = () => {
     courseNumber = i;
     let coursePath = '';//kuvien lisäys tähän, videolla 32.32
 
-    // calendarDoorText.addEventListener("click", openDoor); //jäi kohtaan 34:28
-
-   // let pictureNumber = i;
+    // let pictureNumber = i;
     let calendarPicturePath = './'+ pictures[i];
     
-//calendarDoorText.addEventListener("click", calendarPicturePath);
+calendarDoorText.addEventListener("click", openDoor.bind(null, calendarPicturePath));
 
 
 }
