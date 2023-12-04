@@ -1,7 +1,38 @@
-const calendarButton = document.querySelector(".btn-start"); //tarvitaan vielä buttonin luonti
+const calendarButton = document.querySelector(".btn-start");
 const calendarContainer = document.querySelector(".container")
 
+const pictures = [
+            "doggo.webp",
+            "jouluasetelma.webp",
+            "pakanatalvi1.webp",
+            "1hiiret.webp",
+            "kynttila.webp",
+            "jouluikkuna.webp",
+            "pakanatalvi2.webp",
+            "roikkuvat valot.webp",
+            "lumiukko.webp.webp",
+            "joulukuusi.webp",
+            "pakanatalvi3.webp",
+            "3lahjapaketit.webp",
+            "porvoo.webp",
+            "joulupehmot.webp",
+            "pakanatalvi4.webp",
+            "4nallet.webp",
+            "talvi.webp",
+            "piparit.webp",
+            "pakanatalvi5.webp",
+            "5puu.webp",
+            "tuli.webp",
+            "piparkakkutalo.webp",
+            "pakanatalvi6.webp",
+            "6kuuset.webp"
+];
+
 const calendarDays = 24;
+
+const openDoor = (event) => {
+    event.target.parentNode.style.backgroundImage = 'url()';//kuvien url lisäys, videolla 36.00
+}
 
 const createCalendar = () => {
     for(let i = 0; i < calendarDays; i++){
@@ -16,10 +47,17 @@ const createCalendar = () => {
     calendarDoorText.innerHTML = i + 1;
     calendarDoor.appendChild(calendarDoorText);
 
+
     courseNumber = i;
     let coursePath = '';//kuvien lisäys tähän, videolla 32.32
 
     // calendarDoorText.addEventListener("click", openDoor); //jäi kohtaan 34:28
+
+   // let pictureNumber = i;
+    let calendarPicturePath = './'+ pictures[i];
+    
+//calendarDoorText.addEventListener("click", calendarPicturePath);
+
 
 }
 

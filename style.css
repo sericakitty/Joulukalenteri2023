@@ -42,7 +42,6 @@ h1 {
 }
 
 .image {
-    background-image: url("./lumiukko.webp");
     background-size: cover;
     background-position: center;
     margin-top: 10px;
