@@ -33,7 +33,7 @@ h1 {
     background-image: url(./kansikuva.png);
     margin: 10px auto;
     background-size: cover;
-    box-shadow: 6px 6px 20px 6px white;
+    box-shadow: 1px 1px 20px 10px white;
     display: grid;
     grid-template-columns: repeat(4, 25%);
     grid-template-rows: repeat(6, 1fr);
@@ -44,30 +44,41 @@ h1 {
       "door7 door15 door22 door17"
       "door19 door23 door9 door5"
       "door2 door12 door18 door24";
+    
+    
 }
 
 .image {
-    cursor: pointer;
-    width: 150px;
-    height: 150px;
-    background-size: cover;
-    background-position: center;
-    margin: auto;
+  cursor: pointer;
+  width: 150px;
+  height: 150px;
+  background-size: cover;
+  background-position: center;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .text {
   cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    width: 100%;
-    color: white;
-    text-shadow: 2px 2px 2px black;
-    font-size: 200%;
-    text-align: center;
-    border: 1px solid white;
-    transition: opacity 2.5s;
+  align-items: center;
+  color: white;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  text-shadow: 2px 2px 2px black;
+  font-size: 200%;
+  text-align: center;
+  transition: opacity 2.5s;
+  border: 1px solid white;
+  padding-top: 30%;
+  
+}
+
+.current-day {
+  -webkit-box-shadow: 1px 1px 10px 7.5px #fff;
+  box-shadow: 1px 1px 10px 7.5px #fff;
 }
 
 html {
@@ -81,6 +92,22 @@ html {
 
 
 
+
+.image.enlarge {
+  transform: scale(6); /* Suurentaa kuvan 2-kertaiseksi */
+  transition: transform 0.5s ease-in-out; /* Smooth transition for scaling */
+  border: 1px solid white;
+  position: absolute;
+  top: calc(50% - 20px);
+  left: calc(50% - 80px);
+  z-index: 10; /* Ensure it's above other elements */
+}
+
+.image.shrink {
+  transform: scale(1); /* Palauttaa kuvan alkuperäiseen kokoon */
+  z-index: 0;
+  transition: transform 0.5s ease-in-out; /* Smooth transition for scaling */
+}
 
 
 
