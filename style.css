@@ -47,6 +47,7 @@ h1 {
 }
 
 .image {
+    cursor: pointer;
     width: 150px;
     height: 150px;
     background-size: cover;
@@ -55,6 +56,7 @@ h1 {
 }
 
 .text {
+  cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
