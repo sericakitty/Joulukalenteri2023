@@ -30,8 +30,8 @@ const pictures = [
 
 const calendarDays = 24;
 
-const openDoor = (event) => {
-    event.target.parentNode.style.backgroundImage = 'url()';//kuvien url lisäys, videolla 36.00
+const openDoor = (path, event) => {
+    event.target.parentNode.style.backgroundImage = `url(${path})`;//kuvien url lisäys, videolla 36.00
 }
 
 const createCalendar = () => {
@@ -48,8 +48,8 @@ const createCalendar = () => {
     calendarDoor.appendChild(calendarDoorText);
 
 
-    courseNumber = i;
-    let coursePath = '';//kuvien lisäys tähän, videolla 32.32
+    courseNumber = i + 1;
+    let coursePath = `./Joulukalenteri2023/kuva-${courseNumber}.jpg`; //kuvien lisäys tähän, videolla 32.32
 
     // let pictureNumber = i;
     let calendarPicturePath = './'+ pictures[i];
