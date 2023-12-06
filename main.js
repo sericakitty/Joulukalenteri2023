@@ -33,7 +33,7 @@ const isDayPast = (day) => {
   const doorDate = day; // December is month 11 in Date (0-indexed)
 
   //  check that year is 2023 and month is 12 and date is under the current date
-  if (currentYear <= 2023 && currentMonth <= 12 && currentDate < doorDate + 1 ) {
+  if (currentYear <= 2023 && currentMonth <= 12 && currentDate < doorDate) {
     return true;
   } else {
     return false;
