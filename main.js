@@ -32,7 +32,9 @@ const calendarDays = 24;
 
 const openDoor = (path, event) => {
     event.target.parentNode.style.backgroundImage = `url(${path})`;//kuvien url lisäys, videolla 36.00
-}
+    event.target.style.opacity = "0";
+    event.target.style.backgroundColor = "rgb(1, 47, 81)";
+  }
 
 const createCalendar = () => {
     for(let i = 0; i < calendarDays; i++){

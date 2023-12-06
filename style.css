@@ -33,6 +33,7 @@ h1 {
     background-image: url(./kansikuva.png);
     margin: 10px auto;
     background-size: cover;
+    box-shadow: 6px 6px 20px 6px white;
     display: grid;
     grid-template-columns: repeat(4, 25%);
     grid-template-rows: repeat(6, 1fr);
@@ -64,6 +65,7 @@ h1 {
     text-align: center;
     border: 1px solid white;
     background-color: none;
+    transition: opacity 2.5s;
 }
 
 html {
