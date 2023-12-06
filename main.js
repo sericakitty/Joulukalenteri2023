@@ -3,14 +3,49 @@ const calendarContainer = document.querySelector(".container")
 
 const calendarDays = 24;
 
+
+
 const openDoor = (path, event) => {
-    event.target.parentNode.style.backgroundImage = `url(${path})`;//kuvien url lisäys, videolla 36.00
-    event.target.style.opacity = "0";
-    event.target.style.backgroundColor = "rgb(1, 47, 81)";
+  event.target.parentNode.style.backgroundImage = `url(${path})`;//kuvien url lisäys, videolla 36.00
+
+  event.target.style.opacity = "0";
+  event.target.style.backgroundColor = "rgb(1, 47, 81)";
+  
+
+  // Set up a transition for opacity
+  event.target.style.transition = "opacity 1s ease-in-out";
+
+  // Event listener for the end of the opacity transition
+  event.target.addEventListener('transitionend', function(e) {
+    // Check if the transition of opacity is completed
+    if (e.propertyName === 'opacity') {
+      event.target.style.display = "none";
+    }
+  }, { once: true }); // The 'once' opt
+}
+
+const isDayPast = (day) => {
+  const toDay = new Date();
+  const currentYear = toDay.getFullYear();
+  const currentMonth = toDay.getMonth() + 1;
+  const currentDate = toDay.getDate();
+
+  const doorDate = day; // December is month 11 in Date (0-indexed)
+  console.log(currentDate, doorDate)
+  //  return true if the current date is past the door's date
+
+  //  check that year is under 2023 and month is under 12 and date is under the current date
+  if (currentYear < 2023 && currentMonth < 12 && currentDate < doorDate + 1 ) {
+    return true;
+  } else {
+    return false;
   }
+};
 
 const createCalendar = () => {
-    for(let i = 0; i < calendarDays; i++){
+  calendarButton.disabled = true;
+  const currentDay = new Date();
+  for(let i = 0; i < calendarDays; i++){
     const calendarDoor = document.createElement("div");
     const calendarDoorText = document.createElement("div");
 
@@ -23,15 +58,20 @@ const createCalendar = () => {
     calendarDoor.appendChild(calendarDoorText);
 
 
-    courseNumber = i + 1;
-    let coursePath = `./kuva-${courseNumber}.webp`; //kuvien lisäys tähän, videolla 32.32
+    imageNumber = i + 1;
+
+    if (imageNumber === currentDay.getDate()) {
+      console.log(calendarDoor.style.image)
+      calendarDoor.style = "-webkit-box-shadow: 1px 1px 10px 7.5px #fff;"
+    } 
+
+    let imagePath = `./kuva-${imageNumber}.webp`; //kuvien lisäys tähän, videolla 32.32
     
-calendarDoorText.addEventListener("click", openDoor.bind(null, coursePath));
+    calendarDoorText.addEventListener("click", openDoor.bind(null, imagePath));
 
-
+  }
 }
 
-}
 calendarButton.addEventListener("click", createCalendar);
 
 
