@@ -3,15 +3,15 @@ const calendarContainer = document.querySelector(".container")
 
 const calendarDays = 24;
 
-
-
 const openDoor = (path, event) => {
+  if (isDayPast(Number(event.target.innerText))) {
+    return;
+  }
   event.target.parentNode.style.backgroundImage = `url(${path})`;//kuvien url lisäys, videolla 36.00
 
   event.target.style.opacity = "0";
   event.target.style.backgroundColor = "rgb(1, 47, 81)";
   
-
   // Set up a transition for opacity
   event.target.style.transition = "opacity 1s ease-in-out";
 
@@ -31,11 +31,9 @@ const isDayPast = (day) => {
   const currentDate = toDay.getDate();
 
   const doorDate = day; // December is month 11 in Date (0-indexed)
-  console.log(currentDate, doorDate)
-  //  return true if the current date is past the door's date
 
-  //  check that year is under 2023 and month is under 12 and date is under the current date
-  if (currentYear < 2023 && currentMonth < 12 && currentDate < doorDate + 1 ) {
+  //  check that year is 2023 and month is 12 and date is under the current date
+  if (currentYear <= 2023 && currentMonth <= 12 && currentDate < doorDate + 1 ) {
     return true;
   } else {
     return false;
@@ -61,7 +59,6 @@ const createCalendar = () => {
     imageNumber = i + 1;
 
     if (imageNumber === currentDay.getDate()) {
-      console.log(calendarDoor.style.image)
       calendarDoor.style = "-webkit-box-shadow: 1px 1px 10px 7.5px #fff;"
     } 
 
