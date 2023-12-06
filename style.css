@@ -47,11 +47,11 @@ h1 {
 }
 
 .image {
+    width: 150px;
+    height: 150px;
     background-size: cover;
     background-position: center;
-    margin-top: 10px;
-    margin-right: 10px;
-    margin-bottom: 10px;
+    margin: auto;
 }
 
 .text {
