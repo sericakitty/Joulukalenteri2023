@@ -61,7 +61,7 @@ const openDoor = (path, event) => {
 // Check if the day is past
 const isDayPast = (day) => {
   const today = new Date();
-  return today.getFullYear() <= 2023 && today.getMonth() + 1 <= 12 && today.getDate() < day;
+  return today.getFullYear() <= 2023 && today.getMonth() + 1 <= 12 && today.getDate() < day ;
 };
 
 // Create the calendar
@@ -79,7 +79,7 @@ const createCalendar = () => {
     calendarDoorText.innerHTML = i + 1; // Set the text of the text div
     calendarDoor.appendChild(calendarDoorText); // Append the text div to the image div
 
-    if (i === currentDay) { // Check if the current day is the same as the day of the loop
+    if (i +1 === currentDay) { // Check if the current day is the same as the day of the loop
       calendarDoor.classList.add("current-day"); // Add the class 'current-day' to the image div. This will add highlight to the current day box
     }
 
