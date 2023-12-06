@@ -49,7 +49,7 @@ const createCalendar = () => {
 
 
     courseNumber = i + 1;
-    let coursePath = `./Joulukalenteri2023/kuva-${courseNumber}.jpg`; //kuvien lisäys tähän, videolla 32.32
+    let coursePath = `./Joulukalenteri2023/kuva-${courseNumber}.webp`; //kuvien lisäys tähän, videolla 32.32
 
     // let pictureNumber = i;
     let calendarPicturePath = './'+ pictures[i];
