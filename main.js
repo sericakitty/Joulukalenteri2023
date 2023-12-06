@@ -49,12 +49,10 @@ const createCalendar = () => {
 
 
     courseNumber = i + 1;
-    let coursePath = `./Joulukalenteri2023/kuva-${courseNumber}.jpg`; //kuvien lisäys tähän, videolla 32.32
+    let coursePath = `./kuva-${courseNumber}.webp`; //kuvien lisäys tähän, videolla 32.32
 
-    // let pictureNumber = i;
-    let calendarPicturePath = './'+ pictures[i];
     
-calendarDoorText.addEventListener("click", openDoor.bind(null, calendarPicturePath));
+calendarDoorText.addEventListener("click", openDoor.bind(null, coursePath));
 
 
 }
