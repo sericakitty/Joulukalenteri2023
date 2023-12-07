@@ -8,14 +8,8 @@ The project has been made by Huang Wong, Serica Suhonen, Silja Torvasti, and Vee
 <pre>
 Serica (DALL-E): [kansikuva, kuva-14, kuva-15, kuva-16, kuva-17, kuva-18, kuva-19]
 
-Veera: {
-  jouluasetelma,
-  jouluikkuna,
-  joulukuusi,
-  joulupehmot,
-  piparit,
-  piparkakkutalo
-}
+Veera: [kuva-8, kuva-9, kuva-10, kuva-11, kuva-20, kuva-21]
+
 Silja: {
   doggo: silja,
   kynttila: silja,
