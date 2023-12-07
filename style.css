@@ -16,7 +16,7 @@ h1 {
 }
 
 .btn-start {
-  background-image: url(./button.png);
+  background-image: url(./button.webp);
   color: white;
   font-size: larger;
   font-family:Verdana, Geneva, Tahoma, sans-serif;
@@ -34,7 +34,7 @@ h1 {
     width: 1024px;
     border: 1px solid white;
     background-color: rgb(1, 47, 81);
-    background-image: url(./kansikuva.png);
+    background-image: url(./kansikuva.webp);
     margin: 10px auto;
     background-size: cover;
     box-shadow: 1px 1px 20px 10px white;

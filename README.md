@@ -1,21 +1,13 @@
 # Joulukalenteri2023
 
-made by Huang Wong, Serica Suhonen, Silja Torvasti, and Veera Virtanen
+This project is done in collaboration with a school programming course. 
+The project has been made by Huang Wong, Serica Suhonen, Silja Torvasti, and Veera Virtanen
 
+##### Tiedot kuvista ja niiden copyright 
 
-#####Tässä on tiedot kuvista ja niiden omistus 
 <pre>
-Serica: {
-  DALL·E: {
-    kansikuva,
-    pakanatalvi1,
-    pakanatalvi2, 
-    pakanatalvi3, 
-    pakanatalvi4, 
-    pakanatalvi5, 
-    pakanatalvi6 
-  }
-}
+Serica (DALL-E): [kansikuva, kuva-14, kuva-15, kuva-16, kuva-17, kuva-18, kuva-19]
+
 Veera: {
   jouluasetelma,
   jouluikkuna,
