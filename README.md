@@ -24,12 +24,5 @@ Silja: {
   talvi: silja,
   tuli: silja
 }
-Huang: {
-  kuva-1,
-  kuva-2,
-  kuva-3,
-  kuva-4,
-  kuva-5,
-  kuva-6
-}
+Huang: [kuva-1, kuva-2, kuva-3, kuva-4, kuva-5, kuva-6]
 </pre>
